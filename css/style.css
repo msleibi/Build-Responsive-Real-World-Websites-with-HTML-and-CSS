@@ -75,6 +75,7 @@ h1 {
 h2 {
   font-size: 40px; /* it is not necessary to h1 to be the biggest font*/
   margin-bottom: 30px;
+  position: relative;
 }
 
 h3 {
@@ -228,6 +229,38 @@ button {
   bottom: 50px;
   right: 50px;
 }
+
+/*Pseudo elements*/
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+/*Adjusting Sibling*/
+h3 + p::first-line {
+  /*here only the p that comes after h3 will be selected*/
+  font-weight: bold;
+}
+
+/*After Pseudo element: we create an element using it,It is often used to add cosmetic content to an element with the content property*/
+
+h2::after {
+  /*Or before Pseudo element if we want*/
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #444;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block; /*it is already inline*/
+  padding: 5px 10px;
+  position: absolute;
+  top: -15px;
+  right: -25px;
+}
+
+/* h2::first-letter {
+  font-size: 80px;
+} */
 
 /* Recolving conflicts */
 /* #copyright {

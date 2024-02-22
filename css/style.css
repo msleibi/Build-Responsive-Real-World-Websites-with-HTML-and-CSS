@@ -5,9 +5,11 @@
   padding: 0;
 }
 
+/*PAGE SECTIONS*/
 body {
   font-family: sans-serif;
   color: #444;
+  position: relative;
 }
 
 .container {
@@ -25,7 +27,7 @@ body {
   padding-right: 40px; */
   padding: 20px 40px; /*20 up-bottom, 40 left and right*/
   margin-bottom: 60px;
-  height: 80px;
+  /* height: 80px; */ /*without this the element expands due to display block for the nav a:link*/
 }
 
 nav {
@@ -48,6 +50,7 @@ aside {
   width: 500px;
 }
 
+/*SMALLER ELEMENTS*/
 h1,
 h2,
 h3,
@@ -193,8 +196,37 @@ a:active {
 /* LVHA: link, visited, hover, active*/
 
 .post-img {
+  /*img is an inline-block*/
   width: 50%;
   height: auto;
+  /* margin: 100px; */
+}
+
+nav a:link {
+  /* background-color: orangered; */
+  /* margin: 20px; just for left and right but for top and bottom No because it is inline-block and not block model */
+  /* padding: 20px; We see that top and bottom expanded but it is just inside because it is padding */
+  /* display: block; */
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+
+  /*the position will depend on the parent element so we need to put the position on the parent to be relative because we put the left and top to 50px and it put the button depend on the viewport of the page and not depending on the parent of the button (body in our case)*/
+  position: absolute;
+  /* top: 50px;
+  left: 50px; */
+  bottom: 50px;
+  right: 50px;
 }
 
 /* Recolving conflicts */

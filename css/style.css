@@ -1,0 +1,215 @@
+/*Reseting margin and padding, we cann't do this in the body because margin and padding are not inherited to the texts so we use the universal selector to apply the margin and padding reseting to every element */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  color: #444;
+}
+
+.container {
+  width: 800px;
+  /*margin-left and margin-right: auto that means to calculate the margin on both side automatically and that will center all the elements*/
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0 auto;
+}
+
+.main-header {
+  background-color: #e2e0e0;
+  /* padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px; */
+  padding: 20px 40px; /*20 up-bottom, 40 left and right*/
+  margin-bottom: 60px;
+  height: 80px;
+}
+
+nav {
+  font-size: 18px;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+.post-header {
+  margin-bottom: 40px;
+}
+
+aside {
+  background-color: #e2e0e0;
+  border: 5px solid #1098ad;
+  border-radius: 2cqi;
+  padding: 50px 0;
+  width: 500px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  /* color: #444;Or: 444 is a shorthand to 444444 */
+}
+
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+
+h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 40px; /* it is not necessary to h1 to be the biggest font*/
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  margin-bottom: 0; /* 0 doesn't need px */
+}
+
+/* footer p {
+  font-size: 16px;
+} */
+
+/* article header p {
+  font-style: italic;
+} */
+
+#author {
+  font-style: italic;
+  font-size: 18px;
+}
+
+#copyright {
+  font-size: 16px;
+}
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.related {
+  list-style: none;
+}
+
+/* .first-li {
+  font-weight: bold;
+} */
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+/* for the third child */
+li:nth-child(3) {
+  color: blue;
+}
+
+/* (even) */
+/*li:nth-child(odd)   
+{
+  color: red;
+} */
+/*Misconception: this won't work! 
+because p is not the first child in article  but it will work in this case if we choose p:last-child because p is really 
+the last child*/
+article p:first-child {
+  color: rgb(
+    43,
+    226,
+    52
+  ); /*must <p> be the first child so it must be before the <header> in our example */
+}
+article p:last-child {
+  color: rgb(43, 226, 52);
+}
+
+/*Styling links*/
+a:link /* for a href attribute */ {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1098ad;
+}
+
+a:hover {
+  color: rgb(255, 0, 242);
+  font-weight: bold;
+  text-decoration: underline wavy rgb(19, 12, 9);
+}
+
+a:active {
+  background-color: rgb(235, 232, 84);
+  font-style: italic;
+}
+
+/* LVHA: link, visited, hover, active*/
+
+.post-img {
+  width: 50%;
+  height: auto;
+}
+
+/* Recolving conflicts */
+/* #copyright {
+  color: red;
+}
+
+.copyright {
+  color: blue;
+}
+
+.text {
+  color: yellow;
+}
+
+footer p {
+  color: green !important;
+} */

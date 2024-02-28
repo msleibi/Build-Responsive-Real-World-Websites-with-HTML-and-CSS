@@ -14,7 +14,7 @@
       }
       .el--3 {
         background-color: green;
-        height: 150px;
+        /* height: 150px; */
       }
       .el--4 {
         background-color: goldenrod;
@@ -37,13 +37,17 @@
         font-family: sans-serif;
         background-color: #ddd;
         font-size: 32px;
-        margin: 40px;
+        margin: 80px auto;
+        text-align: center;
+        height: 150px;
+        width: 1200px;
 
         /* FLEXBOX */
         display: flex;
         align-items: center;
         /* justify-content: space-between; */
-        justify-content: flex-start;
+        /* gap: 20px; */
+        /* justify-content: flex-start; */
         /*it is like writing: margin-right: 30px in the .el class but better because we don't need to remove the margin-right after the last element*/
         /* gap: 30px; */
       }
@@ -56,23 +60,54 @@
         flex-shrink: 1; this here to shrink the items by default due to flex-container size
         flex-basis: auto; to give the width */
 
-        /* flex-basis: 100px;
-        flex-shrink: 0; */
-        flex-grow: 1;
+        flex-basis: 200px;
+        /* flex-shrink: 1; */
+        /* flex-grow: 1; */
         /* flex: 0 0 100px; */
+        /* flex-grow: 1; */
       }
 
       .el--1 {
-        align-self: flex-start;
+        /* align-self: flex-end; */
+        flex-shrink: 0;
+        /* flex-grow: 1; */
         /* order: 2; */
         /* flex-grow: 2; it will get the double empty space than the other items */
       }
+      .el--2 {
+        /* align-self: stretch; */
+        /* order: 1; */
+        flex-shrink: 1;
+      }
+      .el--3 {
+        /* align-self: stretch; */
+        /* order: 1; */
+        flex-shrink: 6;
+      }
+      .el--4 {
+        /* align-self: stretch; */
+        /* order: 1; */
+        flex-shrink: 6;
+      }
       .el--5 {
-        align-self: stretch;
-        order: 1;
+        /* align-self: stretch; */
+        /* order: 1; */
+        flex-shrink: 2;
       }
       .el--6 {
-        order: -1; /*0 is the default order*/
+        /* order: -1; 0 is the default order */
+        /* align-self: flex-start; */
+        flex-shrink: 1;
+      }
+      .el--7 {
+        /* align-self: stretch; */
+        /* order: 1; */
+        flex-shrink: 1;
+      }
+      .el--8 {
+        /* align-self: stretch; */
+        /* order: 1; */
+        flex-shrink: 1;
       }
     </style>
   </head>

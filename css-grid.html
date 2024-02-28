@@ -36,13 +36,34 @@
         /* STARTER */
         font-family: sans-serif;
         background-color: #ddd;
-        font-size: 40px;
+        font-size: 30px;
         margin: 40px;
+        height: 500px;
 
         /* CSS GRID */
+        display: grid;
+        grid-template-columns: 200px 200px 100px 100px;
+        grid-template-rows: 200px 200px;
+        /* gap: 10px 25px; */
+        column-gap: 20px;
+        row-gap: 20px;
+        /* align-items: center; */
+        /* justify-items: center; */
+
+        justify-content: center;
+        align-content: center;
+
+        /* grid-column:; */
+        /* grid-row: ; */
+
+        /*to overwrite justify-items & align-items for single items*/
+        /* justify-self: center; */
+        /* align-self: center; */
       }
 
       .container--2 {
+        display: none;
+
         /* STARTER */
         font-family: sans-serif;
         background-color: black;
